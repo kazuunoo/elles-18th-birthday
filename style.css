@@ -1,0 +1,226 @@
+/* =================================
+   ELLE'S BIRTHDAY WEBSITE
+   THEME: CHERRY RED ❤️
+================================= */
+
+:root {
+    --cherry-red: #B51F36;
+    --dark-red: #8B1A2A;
+    --soft-black: #111111;
+    --warm-cream: #F4F1E9;
+    --muted-cream: #D9D2CA;
+}
+
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    background: var(--soft-black);
+    color: var(--warm-cream);
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+/* MAIN SCREEN */
+
+.birthday-screen {
+    min-height: 100vh;
+    min-height: 100svh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 32px 24px;
+
+    background:
+        radial-gradient(
+            ellipse at center,
+            rgba(181, 31, 54, 0.13),
+            transparent 65%
+        ),
+        var(--soft-black);
+}
+
+/* CONTENT */
+
+.birthday-content {
+    width: 100%;
+    max-width: 480px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+
+    animation: fade-in 1.2s ease both;
+}
+
+/* INTRO TEXT */
+
+.eyebrow {
+    margin-bottom: 32px;
+
+    color: #D34A5D;
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    letter-spacing: 3px;
+    line-height: 1.8;
+}
+
+/* HEART */
+
+.heart-icon {
+    width: 56px;
+    height: 56px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 28px;
+
+    border-radius: 50%;
+    background: var(--cherry-red);
+
+    color: var(--warm-cream);
+    font-size: 24px;
+
+    box-shadow: 0 0 35px rgba(181, 31, 54, 0.2);
+}
+
+/* HEADING */
+
+h1 {
+    color: var(--warm-cream);
+    font-size: clamp(32px, 8vw, 48px);
+    font-weight: normal;
+    line-height: 1.3;
+    letter-spacing: -1.5px;
+}
+
+h1 span {
+    color: #D43A50;
+}
+
+/* DIVIDER */
+
+.divider {
+    width: 48px;
+    height: 2px;
+
+    margin: 28px 0;
+
+    background: var(--cherry-red);
+}
+
+/* DESCRIPTION */
+
+.description {
+    color: var(--muted-cream);
+    font-size: 15px;
+    line-height: 2;
+}
+
+/* BUTTON */
+
+#open-gift {
+    margin-top: 36px;
+    padding: 14px 25px;
+
+    border: 1px solid var(--cherry-red);
+    border-radius: 5px;
+
+    background: var(--cherry-red);
+    color: #FFFFFF;
+
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+#open-gift:hover {
+    background: var(--dark-red);
+    box-shadow: 0 0 25px rgba(181, 31, 54, 0.2);
+    transform: translateY(-2px);
+}
+
+#open-gift:focus-visible {
+    outline: 2px solid var(--warm-cream);
+    outline-offset: 5px;
+}
+
+#open-gift span {
+    margin-left: 8px;
+}
+
+/* FOOTER */
+
+.footer-note {
+    margin-top: 28px;
+
+    color: #A6A09B;
+    font-size: 12px;
+    font-style: italic;
+}
+
+/* ENTRANCE ANIMATION */
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* SMALL SCREENS */
+
+@media (max-width: 380px) {
+    .birthday-screen {
+        padding: 24px 18px;
+    }
+
+    .eyebrow {
+        font-size: 9px;
+        letter-spacing: 2px;
+    }
+
+    .description {
+        font-size: 14px;
+    }
+}
